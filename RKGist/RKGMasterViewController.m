@@ -29,22 +29,7 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    // Load the public Gists from Github
-    RKManagedObjectStore *managedObjectStore = [RKManagedObjectStore defaultStore];
-    RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"Gist" inManagedObjectStore:managedObjectStore];
-    [entityMapping addAttributeMappingsFromDictionary:@{
-     @"id":             @"gistID",
-     @"url":            @"jsonURL",
-     @"description":    @"descriptionText",
-     @"public":         @"public",
-     @"created_at":     @"createdAt"}];
-    
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:entityMapping pathPattern:@"/gists/public" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.github.com/gists/public"]];
-    RKManagedObjectRequestOperation *managedObjectRequestOperation = [[RKManagedObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
-    managedObjectRequestOperation.managedObjectContext = self.managedObjectContext;
-    [[NSOperationQueue currentQueue] addOperation:managedObjectRequestOperation];
+    [[RKObjectManager sharedManager] getObjectsAtPath:@"/gists/public" parameters:nil success:nil failure:nil];
 }
 
 - (void)didReceiveMemoryWarning
