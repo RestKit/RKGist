@@ -1,0 +1,43 @@
+
+PODS:
+- AFNetworking (1.1.0)
+- Expecta (0.2.1)
+- RestKit (0.20.0rc1):
+  - RestKit/Core (= 0.20.0rc1)
+- RestKit/Core (0.20.0rc1):
+  - RestKit/CoreData
+  - RestKit/Network
+  - RestKit/ObjectMapping
+- RestKit/CoreData (0.20.0rc1)
+- RestKit/Network (0.20.0rc1):
+  - AFNetworking (= 1.1.0)
+  - RestKit/ObjectMapping
+  - RestKit/Support
+  - SOCKit
+- RestKit/ObjectMapping (0.20.0rc1)
+- RestKit/Search (0.20.0rc1):
+  - RestKit/CoreData
+- RestKit/Support (0.20.0rc1)
+- RestKit/Testing (0.20.0rc1)
+- SOCKit (1.1)
+
+DEPENDENCIES:
+- Expecta (= 0.2.1)
+- RestKit (~> 0.20.0rc)
+- RestKit/Search (~> 0.20.0rc)
+- RestKit/Testing (~> 0.20.0rc)
+
+SPEC CHECKSUMS:
+  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
+  RestKit: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/Core: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/CoreData: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/Network: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/ObjectMapping: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/Search: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/Support: 0382132969d823a872b377c1ab2e383f3c74a339
+  RestKit/Testing: 0382132969d823a872b377c1ab2e383f3c74a339
+  SOCKit: 179515c1a621dd5652a60e9be02ea4adcd25bc9b
+  Expecta: d46fb1bd78c90a83da0158b9b1e108de106e369f
+
+COCOAPODS: 0.16.2
