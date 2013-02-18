@@ -37,13 +37,14 @@
     
     [RKObjectManager setSharedManager:objectManager];
     
-    RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"Gist" inManagedObjectStore:managedObjectStore];
+    RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"Gist" inManagedObjectStore:managedObjectStore];    
     [entityMapping addAttributeMappingsFromDictionary:@{
      @"id":             @"gistID",
      @"url":            @"jsonURL",
      @"description":    @"descriptionText",
      @"public":         @"public",
      @"created_at":     @"createdAt"}];
+    entityMapping.identificationAttributes = @[ @"gistID" ];
     
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:entityMapping pathPattern:@"/gists/public" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     
