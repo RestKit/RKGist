@@ -8,6 +8,7 @@
 
 #import "RKGMasterViewController.h"
 #import "RKGDetailViewController.h"
+#import "RKGGist.h"
 
 @interface RKGMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -232,8 +233,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"descriptionText"] description];
+    RKGGist *gist = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = gist.titleText;
+    cell.detailTextLabel.text = gist.subtitleText;
 }
 
 @end
