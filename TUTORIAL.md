@@ -83,7 +83,7 @@ By following this guide, you'll be creating an iOS application with RestKit call
 
 To begin creating the application, Open Xcode and select the "File" menu, then "New Project…". You will be presented with a new Xcode window displaying the template selection sheet. Select the "Master-Detail Application" template under the "iOS" and hit the "Next" button.
 
-// TODO: [INSERT SCREENSHOT HERE]
+![Choose Project Template](Images/Xcode-Choose_Project_Template.png)
 
 On the next screen, configure the options for your project by setting the *Product Name* to "RKGist", specifying a *Class Prefix* of "RKG" and then enabling the following options:
 
@@ -94,7 +94,7 @@ On the next screen, configure the options for your project by setting the *Produ
 
 Hit the "Next" button and save your new project to an appropriate place on disk.
 
-// TODO: [INSERT SCREENSHOT HERE]
+![Configure Project Options](Images/Xcode-Configure_Project_Options.png)
 
 ### Installing RestKit via CocoaPods
 
@@ -452,7 +452,7 @@ Then update the sort descriptors so that the controller is configured to sort on
 
 You should now be able to build & run the app via the **Product** > **Run** menu (or hit Apple+R). The application should start as expected and show you an empty table view similar to the following:
 
-// TODO: [INSERT EMPTY TABLE VIEW HERE]
+![Empty TableView](Images/RKGist-Empty.png)
 
 The application is now configured for displaying Gist objects from Core Data, but there's a problem -- there aren't any in the store to display! We'll remedy this by introducing RestKit into the mix to load some Gist objects from Github to populate the table view.
 
@@ -489,7 +489,7 @@ Then switch to the `configureCell:atIndexPath:` method and replace it with the f
 
 Build and run the app again. You should now see a rather ugly table view that is populated with content. If you open up the Console panel within Xcode via the **View** > **Debug Area** > **Activate Console** menu (or via Apple+Shift+C), you'll see a complete dump of the JSON that was retrieved from the Gist service.
 
-// TODO: [INSERT UGLY IMAGE OF THE TABLE VIEW]
+![Ugly Table View](Images/RKGist-Ugly.png)
 
 Now, quite a bit of magic has just taken place and its worth taking a step back to examine all of these pieces in depth. Let's first consider the process conceptually, then we'll take a look at the actual classes and methods that collaborate to implement the process. Conceptually, what we've just done is:
 
@@ -806,7 +806,7 @@ Finally, switch to the `RKGGist.m` file and add implementations for the new read
 
 Relaunch the application. You should now see a much less sparse table of gists that looks something like the image below:
 
-// TODO: Insert image
+![Subtitled Table View](Images/RKGist-Subtitled.png)
 
 ### Date and Time Formatting
 
