@@ -356,13 +356,6 @@ Once all the attributes have been created, repeat the process for the relationsh
 	<td>Not Checked</td>
 </tr>
 <tr>
-	<td>Gist</td>
-	<td>user</td>
-	<td>User</td>
-	<td>gists</td>
-	<td>Not Checked</td>
-</tr>
-<tr>
 	<td>User</td>
 	<td>gists</td>
 	<td>Gist</td>
