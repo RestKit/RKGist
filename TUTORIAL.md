@@ -68,7 +68,7 @@ The Testing component includes several classes to make unit testing object mappi
 
 RestKit is distributed as a single library containing several sub-components. There are two supported installation methods:
 
-1. [Automatic configuration via CocoaPoads](https://github.com/RestKit/RestKit/wiki/Installing-RestKit-v0.20.x-via-CocoaPods) - This is the recommended approach as CocoaPods handles the linker flags, header paths, and download of source code dependencies on your behalf.
+1. [Automatic configuration via CocoaPods](https://github.com/RestKit/RestKit/wiki/Installing-RestKit-v0.20.x-via-CocoaPods) - This is the recommended approach as CocoaPods handles the linker flags, header paths, and download of source code dependencies on your behalf.
 2. [Manual configuration as a submodule](https://github.com/RestKit/RestKit/wiki/Installing-RestKit-v0.20.x-as-a-Git-Submodule) - This method involves adding a submodule to your project and building RestKit as a dependency. You are responsible for configuring the project appropriately.
 
 Before proceding with the tutorial, you should familiarize yourself with the installation method of your choosing.
