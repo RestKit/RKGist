@@ -24,7 +24,7 @@ If you already have a handle on the basics of Cocoa development, then there are 
 * [Key-Value Coding](http://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/KeyValueCoding/Articles/KeyValueCoding.html) - Key-Value coding is a mechanism for expressing indirect read/write access to properties by name. It is implemented as an informal protocol that is adopted by `NSObject` and underpins many Cocoa technologies such as key-value observation, Core Data, and bindings. KVC is the enabling technology for the object mapping system in RestKt.
 * [NSOperation](http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/NSOperation_class/Reference/Reference.html) - The `NSOperation` class is a Cocoa Foundation abstract class that encapsulates the code and data associated with a single task. Much of RestKit is implemented as `NSOperation` subclasses.
 * [Core Data](http://developer.apple.com/library/mac/#documentation/cocoa/Conceptual/CoreData/cdProgrammingGuide.html) - Core Data is an object graph management and persistence framework provided by Apple with the Mac OS X and iOS SDKs. RestKit provides strong support for integrating a RESTful web service API with client-side persistence backed by Core Data.
-* [Objective-C Runtime](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) - Objective-C is a highly dynamic language implemented on top of the C programming language. The runtime provides much of the dynamic functionality of the language. RestKit leverages many features of the runtime in the implementation of the object mapping engine. For the purposes of this guide, it is sufficient for the reader to simply be aware that Objective-C provides dynamic functionality such as runtime type inspection, declared property introspection, and and message forwarding.
+* [Objective-C Runtime](https://developer.apple.com/library/mac/#documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Introduction/Introduction.html) - Objective-C is a highly dynamic language implemented on top of the C programming language. The runtime provides much of the dynamic functionality of the language. RestKit leverages many features of the runtime in the implementation of the object mapping engine. For the purposes of this guide, it is sufficient for the reader to simply be aware that Objective-C provides dynamic functionality such as runtime type inspection, declared property introspection, and message forwarding.
 * [AFNetworking](http://afnetworking.org/) - AFNetworking is a "delightful networking library for iOS and Mac OS X". RestKit is implemented on top of the networking primitives provided by AFNetworking.
 
 ## What is RestKit?
@@ -722,7 +722,7 @@ Repeat the process of loading the list of gists repeatedly. You'll notice that o
 
 ### Updating the Table UI
 
-We've covered a lot of ground and put together a fair amount of functionality with a relatively small amount of code, but the application isn't all that existing to look at. Let's make a few adjustments to our user interface that will make for a more compelling UI and set us up for the next round of RestKit work.
+We've covered a lot of ground and put together a fair amount of functionality with a relatively small amount of code, but the application isn't all that exciting to look at. Let's make a few adjustments to our user interface that will make for a more compelling UI and set us up for the next round of RestKit work.
 
 #### Creating Model Classes
 
@@ -814,7 +814,7 @@ When the `created_at` key-path is read from parsed JSON representation of a gist
 For many type transformations, the process is very straightforward -- the mapper simply invokes the appropriate conversion method for transforming the value. Conversions between `NSString` and `NSDate` objects, however, face some special challenges and as such, have some special support. `NSDateFormatter` is an Apple provided class that is part of the Foundation framework. It supports the flexible transformation between `NSDate` and `NSString` objects via format strings and is both locale and time zone aware. Unfortunately, it also suffers from a few shortcomings:
 
 * It is relatively expensive to instantiate. Doing repeated creation of transient instances is a great way to degrade performance.
-* It requires explicit configuration. A given instance can only parse and emit a single format at a time, so you can just feed it an arbitrary and expect to get a valid response.
+* It requires explicit configuration. A given instance can only parse and emit a single format at a time, so you can't just feed it an arbitrary and expect to get a valid response.
 * Though its format strings are flexible, it does not support the ISO 8601 standard -- which happens to be the most common format in modern JSON web API's.
 
 RestKit provides a solution for each of these shortcomings:
