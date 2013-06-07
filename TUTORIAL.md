@@ -98,7 +98,7 @@ Hit the "Next" button and save your new project to an appropriate place on disk.
 
 ### Installing RestKit via CocoaPods
 
-Once your project has been created, you'll need to add RestKit to it using [CocoaPods](http://http://cocoapods.org/). To do so, open up your Terminal application and navigate to the location on disk where you saved the RKGist application. From there, install CocoaPods by executing the following commands on your Terminal:
+Once your project has been created, you'll need to add RestKit to it using [CocoaPods](http://cocoapods.org/). To do so, open up your Terminal application and navigate to the location on disk where you saved the RKGist application. From there, install CocoaPods by executing the following commands on your Terminal:
 
 ```sh
 $ [sudo] gem install cocoapods
