@@ -416,7 +416,7 @@ You'll notice that the size of the file has been reduced considerably. What we'v
 
 When you invoke `createManagedObjectContexts`, the store creates a pair of managed object contexts arranged in a parent-child hierarchy. The contexts are as follows:
 
-* `persistentStoreManagedObjectContext` - This is the 'root' context for the store and has a direct relationship with the `persistentStoreCoordinator`. The context is initialized with the `NSPrivateQueueConcurrencyType` so that it will performs it I/O operations off of the main thread.
+* `persistentStoreManagedObjectContext` - This is the 'root' context for the store and has a direct relationship with the `persistentStoreCoordinator`. The context is initialized with the `NSPrivateQueueConcurrencyType` so that it will perform it's I/O operations off of the main thread.
 * `mainQueueManagedObjectContext` - This context is a child of the `persistentStoreManagedObjectContext` and is initialized with the `NSMainQueueConcurrencyType`. The main queue context is suitable for general purpose usage in your app's user interface. 
 
 The context arrangement can be visually understood by reviewing the following graphic:
