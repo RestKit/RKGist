@@ -9,6 +9,7 @@
 #import "RKGMasterViewController.h"
 #import "RKGDetailViewController.h"
 #import "RKGGist.h"
+#import "RKGGistManager.h"
 
 @interface RKGMasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -34,15 +35,17 @@
     [refreshControl addTarget:self action:@selector(loadGists) forControlEvents:UIControlEventValueChanged];
     self.refreshControl = refreshControl;
     
+    self.managedObjectContext = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
+    
     [self loadGists];
     [self.refreshControl beginRefreshing];
 }
 
 - (void)loadGists
 {
-    [[RKObjectManager sharedManager] getObjectsAtPath:@"/gists/public" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    [[RKGGistManager sharedManager] GETObjectsAtURLForString:@"/gists/public" parameters:nil success:^(NSURLSessionDataTask *task, RKMappingResult *mappingResult) {
         [self.refreshControl endRefreshing];
-    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [self.refreshControl endRefreshing];
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An Error Has Occurred" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];

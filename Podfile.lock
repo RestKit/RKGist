@@ -1,43 +1,74 @@
-
 PODS:
-- AFNetworking (1.1.0)
-- Expecta (0.2.1)
-- RestKit (0.20.0rc1):
-  - RestKit/Core (= 0.20.0rc1)
-- RestKit/Core (0.20.0rc1):
-  - RestKit/CoreData
-  - RestKit/Network
-  - RestKit/ObjectMapping
-- RestKit/CoreData (0.20.0rc1)
-- RestKit/Network (0.20.0rc1):
-  - AFNetworking (= 1.1.0)
-  - RestKit/ObjectMapping
-  - RestKit/Support
-  - SOCKit
-- RestKit/ObjectMapping (0.20.0rc1)
-- RestKit/Search (0.20.0rc1):
-  - RestKit/CoreData
-- RestKit/Support (0.20.0rc1)
-- RestKit/Testing (0.20.0rc1)
-- SOCKit (1.1)
+  - AFNetworking (2.2.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.2.0):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.2.0)
+  - AFNetworking/Security (2.2.0)
+  - AFNetworking/Serialization (2.2.0)
+  - AFNetworking/UIKit (2.2.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CSURITemplate (HEAD based on 0.3)
+  - Expecta (0.2.1)
+  - RestKit (1.0.0-development):
+    - RestKit/Core
+  - RestKit/Core (1.0.0-development):
+    - RestKit/CoreData
+    - RestKit/Network
+    - RestKit/ObjectMapping
+  - RestKit/CoreData (1.0.0-development)
+  - RestKit/Network (1.0.0-development):
+    - AFNetworking (~> 2.2.0)
+    - CSURITemplate (~> 0.3)
+    - RestKit/ObjectMapping
+    - RestKit/Support
+    - RKSupport (~> 1.0.0)
+  - RestKit/ObjectMapping (1.0.0-development):
+    - RestKit/Support
+    - RKValueTransformers (~> 1.0.1)
+  - RestKit/Support (1.0.0-development):
+    - TransitionKit (= 2.0.0)
+  - RKSupport (1.0.0):
+    - RKSupport/All
+  - RKSupport/All (1.0.0):
+    - RKSupport/RKParameterConstraint
+    - RKSupport/RKPathTemplate
+  - RKSupport/RKParameterConstraint (1.0.0)
+  - RKSupport/RKPathTemplate (1.0.0)
+  - RKValueTransformers (1.0.1)
+  - TransitionKit (2.0.0)
 
 DEPENDENCIES:
-- Expecta (= 0.2.1)
-- RestKit (~> 0.20.0rc)
-- RestKit/Search (~> 0.20.0rc)
-- RestKit/Testing (~> 0.20.0rc)
+  - CSURITemplate (HEAD)
+  - Expecta (= 0.2.1)
+  - RestKit (from `https://github.com/RestKit/RestKit`, branch `experimental/port-to-afnetworking-2.0`)
+  - RKSupport (from `https://github.com/RestKit/RKSupport`, branch `master`)
+
+EXTERNAL SOURCES:
+  RestKit:
+    :branch: experimental/port-to-afnetworking-2.0
+    :git: https://github.com/RestKit/RestKit
+  RKSupport:
+    :branch: master
+    :git: https://github.com/RestKit/RKSupport
 
 SPEC CHECKSUMS:
-  AFNetworking: 761a418233d280c1e0580bcb76ff9cb4c3073d17
-  RestKit: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/Core: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/CoreData: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/Network: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/ObjectMapping: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/Search: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/Support: 0382132969d823a872b377c1ab2e383f3c74a339
-  RestKit/Testing: 0382132969d823a872b377c1ab2e383f3c74a339
-  SOCKit: 179515c1a621dd5652a60e9be02ea4adcd25bc9b
+  AFNetworking: e8cfd8f3fe3bfe19124a0cc63f4d45752d892a56
+  CSURITemplate: a2ab0f383c600646468de33b65f58f901388d8d4
   Expecta: d46fb1bd78c90a83da0158b9b1e108de106e369f
+  RestKit: d042e69e24d015c7902838a4c7dd26ae4d53d101
+  RKSupport: 162da690b0abf08d8f9e2b701f7a9fafd76a6e80
+  RKValueTransformers: 1562d458b9c9d59ce777bfc5982f2e1aef2e9182
+  TransitionKit: 433284465abacdc07852d7db6dd0cc075010059a
 
-COCOAPODS: 0.16.2
+COCOAPODS: 0.29.0

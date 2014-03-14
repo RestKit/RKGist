@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10F781DF5EB4421797E6C6E2 /* libPods-test.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E887B2EF8EB945F985E66FB1 /* libPods-test.a */; };
 		259DC5ED16C9B56B00045C36 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DC5EC16C9B56B00045C36 /* UIKit.framework */; };
 		259DC5EF16C9B56B00045C36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DC5EE16C9B56B00045C36 /* Foundation.framework */; };
 		259DC5F116C9B56B00045C36 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 259DC5F016C9B56B00045C36 /* CoreGraphics.framework */; };
@@ -31,6 +32,7 @@
 		259DC64116D1EED900045C36 /* RKGUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 259DC64016D1EED900045C36 /* RKGUser.m */; };
 		259DC64416D1EED900045C36 /* RKGGist.m in Sources */ = {isa = PBXBuildFile; fileRef = 259DC64316D1EED900045C36 /* RKGGist.m */; };
 		50D65A37938942BE8A8734FD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F50564DCB314D8C829CBDAB /* libPods.a */; };
+		C06A563D18D2ACED0001B383 /* RKGGistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C06A563C18D2ACED0001B383 /* RKGGistManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,10 @@
 		259DC64216D1EED900045C36 /* RKGGist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKGGist.h; sourceTree = "<group>"; };
 		259DC64316D1EED900045C36 /* RKGGist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKGGist.m; sourceTree = "<group>"; };
 		9F50564DCB314D8C829CBDAB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06A563B18D2ACED0001B383 /* RKGGistManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKGGistManager.h; sourceTree = "<group>"; };
+		C06A563C18D2ACED0001B383 /* RKGGistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKGGistManager.m; sourceTree = "<group>"; };
+		CE31736880C14D66AAFD8C21 /* Pods-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test.xcconfig"; path = "Pods/Pods-test.xcconfig"; sourceTree = "<group>"; };
+		E887B2EF8EB945F985E66FB1 /* libPods-test.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-test.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,7 @@
 				259DC61A16C9B56C00045C36 /* UIKit.framework in Frameworks */,
 				259DC61B16C9B56C00045C36 /* Foundation.framework in Frameworks */,
 				259DC61C16C9B56C00045C36 /* CoreData.framework in Frameworks */,
+				10F781DF5EB4421797E6C6E2 /* libPods-test.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +122,7 @@
 				259DC5EB16C9B56B00045C36 /* Frameworks */,
 				259DC5EA16C9B56B00045C36 /* Products */,
 				1DBAFD0CA90B4FE19926428F /* Pods.xcconfig */,
+				CE31736880C14D66AAFD8C21 /* Pods-test.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +144,7 @@
 				259DC5F216C9B56B00045C36 /* CoreData.framework */,
 				259DC61816C9B56C00045C36 /* SenTestingKit.framework */,
 				9F50564DCB314D8C829CBDAB /* libPods.a */,
+				E887B2EF8EB945F985E66FB1 /* libPods-test.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +167,8 @@
 				259DC63C16D1EED900045C36 /* RKGFile.h */,
 				259DC63D16D1EED900045C36 /* RKGFile.m */,
 				259DC5F516C9B56B00045C36 /* Supporting Files */,
+				C06A563B18D2ACED0001B383 /* RKGGistManager.h */,
+				C06A563C18D2ACED0001B383 /* RKGGistManager.m */,
 			);
 			path = RKGist;
 			sourceTree = "<group>";
@@ -220,10 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 259DC62D16C9B56C00045C36 /* Build configuration list for PBXNativeTarget "RKGistTests" */;
 			buildPhases = (
+				313A992D48DA4D6F9F98D2A7 /* Check Pods Manifest.lock */,
 				259DC61216C9B56C00045C36 /* Sources */,
 				259DC61316C9B56C00045C36 /* Frameworks */,
 				259DC61416C9B56C00045C36 /* Resources */,
 				259DC61516C9B56C00045C36 /* ShellScript */,
+				B76DCDE1944C43928A178474 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -242,6 +255,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = RKG;
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = RestKit;
 			};
@@ -300,6 +314,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		313A992D48DA4D6F9F98D2A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		44ED6A90347B416391D9847E /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +343,21 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
+		B76DCDE1944C43928A178474 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -322,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				259DC5FB16C9B56B00045C36 /* main.m in Sources */,
+				C06A563D18D2ACED0001B383 /* RKGGistManager.m in Sources */,
 				259DC5FF16C9B56B00045C36 /* RKGAppDelegate.m in Sources */,
 				259DC60B16C9B56B00045C36 /* RKGist.xcdatamodeld in Sources */,
 				259DC60E16C9B56B00045C36 /* RKGMasterViewController.m in Sources */,
@@ -460,6 +505,7 @@
 		};
 		259DC62E16C9B56C00045C36 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE31736880C14D66AAFD8C21 /* Pods-test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RKGist.app/RKGist";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -477,6 +523,7 @@
 		};
 		259DC62F16C9B56C00045C36 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE31736880C14D66AAFD8C21 /* Pods-test.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RKGist.app/RKGist";
 				FRAMEWORK_SEARCH_PATHS = (
