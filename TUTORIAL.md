@@ -463,7 +463,11 @@ RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"Gist
  @"created_at":     @"createdAt"}];
     
 RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
-RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:entityMapping method:RKRequestMethodGET pathPattern:@"/gists/public" keyPath:nil statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:entityMapping
+                                                                                        method:RKRequestMethodGET
+                                                                                   pathPattern:@"/gists/public"
+                                                                                       keyPath:nil
+                                                                                   statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
 NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.github.com/gists/public"]];
 RKManagedObjectRequestOperation *managedObjectRequestOperation = [[RKManagedObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[ responseDescriptor ]];
 managedObjectRequestOperation.managedObjectContext = self.managedObjectContext;
