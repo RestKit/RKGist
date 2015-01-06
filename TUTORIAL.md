@@ -662,7 +662,7 @@ Also note that a managed object request operation whose parent context is not th
 
 ### Adding Pull to Refresh & Error Handling
 
-Now that we've cleaned up the controller code for out table view by centralizing the configuration into the object manager we have a functional interface, but there's a major feature unimplemented: there's no way to refresh the list without relaunching the app.
+Now that we've cleaned up the controller code for our table view by centralizing the configuration into the object manager we have a functional interface, but there's a major feature unimplemented: there's no way to refresh the list without relaunching the app.
 
 We'll fix this by adding a [`UIRefreshControl`](http://developer.apple.com/library/ios/#documentation/uikit/reference/UIRefreshControl_class/Reference/Reference.html) to the table view. `UIRefreshControl` was introduced in iOS 6 and provides a standard UIKit control for refreshing a table view. To add it into `RKGist`, open up `RKGMasterViewController.m` and navigate to the `viewDidLoad` method and replace it with the following code:
 
