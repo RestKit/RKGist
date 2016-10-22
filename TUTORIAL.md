@@ -114,16 +114,16 @@ Your favorite editor will open and allow you to configure your dependencies. Inp
 
 ```ruby
 platform :ios, 6.0
-pod 'RestKit', '~> 0.20.0rc'
-
+target "RKGist" do
+    pod 'RestKit', '~> 0.20.0rc'
 # Include optional Testing and Search components
-pod 'RestKit/Testing', '~> 0.20.0rc'
-pod 'RestKit/Search', '~> 0.20.0rc'
+    pod 'RestKit/Testing', '~> 0.20.0rc'
+    pod 'RestKit/Search', '~> 0.20.0rc'
+end
 
 # Import Expecta for Testing
-target :test do
-  link_with :RKGistTests
-  pod 'Expecta', '0.2.1'
+target "RKGistTests" do
+    pod 'Expecta', '0.2.1'
 end
 ```
 
